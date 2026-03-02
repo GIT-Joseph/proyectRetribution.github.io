@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resultado</title>
+    <style>
+      body {
+        background: black;
+        color: white;
+        font-family: Arial;
+        text-align: center;
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mensaje"></h1>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const nombre = params.get("nombre");
+
+      document.getElementById("mensaje").textContent =
+        "Objetivo seleccionado: " + nombre;
+    </script>
+  </body>
+</html>
